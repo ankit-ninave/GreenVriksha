@@ -1,0 +1,27 @@
+<section class="section">
+  <div class="container">
+    <div class="gallery-header">
+      <app-section-title
+        title="Our Work in Action"
+        subtitle="Snapshots from our Sunday drives across Nagpur."
+        [centered]="false"
+      />
+      <a routerLink="/gallery" class="btn btn-outline">
+        View Full Gallery
+        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6"/></svg>
+      </a>
+    </div>
+
+    <div class="gallery-preview-grid">
+      @for (photo of photos; track photo.caption) {
+        <div class="gallery-placeholder" [style.background]="photo.color">
+          <div class="gallery-ph-inner">
+            <div class="gallery-ph-icon">📸</div>
+            <span class="gallery-ph-tag">{{ photo.tag }}</span>
+          </div>
+          <div class="gallery-ph-caption">{{ photo.caption }}</div>
+        </div>
+      }
+    </div>
+  </div>
+</section>

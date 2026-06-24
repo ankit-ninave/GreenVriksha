@@ -1,0 +1,129 @@
+.volunteer-cta-wrap {
+  background: var(--gray-50);
+}
+
+.volunteer-cta {
+  background: linear-gradient(135deg, var(--primary) 0%, #2563EB 60%, var(--green-dark) 100%);
+  border-radius: 1.5rem;
+  padding: 4rem 3rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-deco {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.07);
+  pointer-events: none;
+}
+
+.cta-deco-1 {
+  width: 350px;
+  height: 350px;
+  top: -150px;
+  left: -100px;
+}
+
+.cta-deco-2 {
+  width: 250px;
+  height: 250px;
+  bottom: -80px;
+  right: -50px;
+}
+
+.cta-body {
+  position: relative;
+  z-index: 1;
+}
+
+.cta-badge {
+  display: inline-block;
+  background: rgba(255,255,255,0.15);
+  color: rgba(255,255,255,0.95);
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 0.35rem 1rem;
+  border-radius: var(--radius-full);
+  margin-bottom: 1.25rem;
+  border: 1px solid rgba(255,255,255,0.25);
+}
+
+h2 {
+  color: var(--white);
+  margin-bottom: 1rem;
+}
+
+p {
+  color: rgba(255,255,255,0.8);
+  font-size: 1rem;
+  max-width: 600px;
+  margin: 0 auto 2rem;
+  line-height: 1.7;
+}
+
+.cta-stats-row {
+  display: flex;
+  justify-content: center;
+  gap: 2.5rem;
+  margin-bottom: 2.5rem;
+  flex-wrap: wrap;
+}
+
+.cta-mini-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.2rem;
+
+  strong {
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: var(--white);
+  }
+
+  span {
+    font-size: 0.75rem;
+    color: rgba(255,255,255,0.65);
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+}
+
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.btn-outline-white {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--radius-full);
+  font-weight: 600;
+  font-size: 0.9rem;
+  background: transparent;
+  color: var(--white);
+  border: 2px solid rgba(255,255,255,0.5);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-decoration: none;
+
+  &:hover { background: rgba(255,255,255,0.15); border-color: white; }
+}
+
+.w-icon {
+  width: 1.1rem;
+  height: 1.1rem;
+}
+
+@media (max-width: 600px) {
+  .volunteer-cta { padding: 2.5rem 1.5rem; }
+  .cta-stats-row { gap: 1.5rem; }
+  .cta-buttons { flex-direction: column; align-items: center; }
+  .cta-buttons .btn { width: 100%; max-width: 280px; justify-content: center; }
+}

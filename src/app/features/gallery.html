@@ -1,0 +1,50 @@
+<!-- Hero -->
+<section class="gallery-hero">
+  <div class="container">
+    <div class="page-badge">Our Work</div>
+    <h1>Gallery – <span class="text-primary">Drives & Impact</span></h1>
+    <p>Photos from our Sunday plantation drives, seed collection camps, and community events across Nagpur.</p>
+  </div>
+</section>
+
+<!-- Gallery -->
+<section class="section">
+  <div class="container">
+    <!-- Filter -->
+    <div class="gallery-filters">
+      @for (tag of tags; track tag) {
+        <button
+          class="gallery-filter-btn"
+          [class.active]="activeTag() === tag"
+          (click)="setTag(tag)"
+        >
+          {{ tag }}
+        </button>
+      }
+    </div>
+
+    <!-- Grid -->
+    <div class="gallery-grid">
+      @for (item of filtered; track item.caption) {
+        <div class="gallery-item" [style.background]="item.color">
+          <div class="gi-inner">
+            <div class="gi-icon">📸</div>
+            <span class="gi-tag">{{ item.tag }}</span>
+          </div>
+          <div class="gi-footer">
+            <span class="gi-caption">{{ item.caption }}</span>
+            <span class="gi-date">{{ item.date }}</span>
+          </div>
+        </div>
+      }
+
+      @if (filtered.length === 0) {
+        <div class="no-items">No photos found for this category.</div>
+      }
+    </div>
+
+    <p class="gallery-note">
+      📷 These are placeholder tiles. Replace them with actual drive photos once you have them.
+    </p>
+  </div>
+</section>

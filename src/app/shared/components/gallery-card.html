@@ -1,0 +1,11 @@
+<div class="gallery-card">
+  <div class="gallery-img-wrap">
+    <img [src]="imageUrl()" [alt]="caption()" loading="lazy" />
+    @if (tag()) {
+      <span class="gallery-tag">{{ tag() }}</span>
+    }
+  </div>
+  @if (caption()) {
+    <p class="gallery-caption">{{ caption() }}</p>
+  }
+</div>

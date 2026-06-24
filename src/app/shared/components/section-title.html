@@ -1,0 +1,7 @@
+<div class="section-title" [class.text-center]="centered()">
+  <h2>{{ title() }}</h2>
+  @if (subtitle()) {
+    <p class="subtitle">{{ subtitle() }}</p>
+  }
+  <div class="accent-line" [class.mx-auto]="centered()"></div>
+</div>

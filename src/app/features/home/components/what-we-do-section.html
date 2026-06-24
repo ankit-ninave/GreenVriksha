@@ -1,0 +1,19 @@
+<section class="section section-alt">
+  <div class="container">
+    <app-section-title
+      title="What We Do"
+      subtitle="From planting to protection — our work goes beyond just digging holes. We build a lasting green community."
+      [centered]="true"
+    />
+    <div class="activities-grid">
+      @for (item of activities; track item.title) {
+        <app-feature-card
+          [icon]="item.icon"
+          [title]="item.title"
+          [description]="item.description"
+          [color]="item.color"
+        />
+      }
+    </div>
+  </div>
+</section>

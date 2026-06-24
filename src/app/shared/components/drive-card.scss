@@ -1,0 +1,113 @@
+.drive-card {
+  background: var(--white);
+  border-radius: var(--radius-xl);
+  padding: 1.75rem;
+  border: 1px solid var(--gray-200);
+  transition: all 0.2s ease;
+
+  &:hover { box-shadow: var(--shadow-lg); transform: translateY(-2px); }
+  &.status-upcoming { border-left: 4px solid var(--primary); }
+  &.status-completed { border-left: 4px solid var(--gray-300); opacity: 0.8; }
+}
+
+.drive-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 1.25rem;
+}
+
+.drive-date {
+  display: flex;
+  flex-direction: column;
+}
+
+.drive-day {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--primary);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.drive-date-text {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--gray-900);
+  margin-top: 0.2rem;
+}
+
+.drive-status {
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.25rem 0.75rem;
+  border-radius: var(--radius-full);
+
+  &.status-badge-upcoming { background: var(--primary-light); color: var(--primary-dark); }
+  &.status-badge-ongoing { background: var(--green-light); color: var(--green-dark); }
+  &.status-badge-completed { background: var(--gray-100); color: var(--gray-500); }
+}
+
+.drive-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  margin-bottom: 1rem;
+}
+
+.drive-info-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  color: var(--gray-600);
+}
+
+.info-icon {
+  width: 1rem;
+  height: 1rem;
+  flex-shrink: 0;
+  color: var(--gray-400);
+}
+
+.drive-focus {
+  margin-top: 0.25rem;
+}
+
+.focus-badge {
+  display: inline-block;
+  background: var(--green-light);
+  color: var(--green-dark);
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.2rem 0.65rem;
+  border-radius: var(--radius-full);
+}
+
+.drive-bring {
+  border-top: 1px solid var(--gray-100);
+  padding-top: 1rem;
+}
+
+.bring-label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--gray-500);
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.bring-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+
+  li {
+    font-size: 0.78rem;
+    background: var(--gray-100);
+    color: var(--gray-600);
+    padding: 0.2rem 0.6rem;
+    border-radius: var(--radius-full);
+  }
+}

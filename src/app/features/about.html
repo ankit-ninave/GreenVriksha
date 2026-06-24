@@ -1,0 +1,130 @@
+<!-- Hero -->
+<section class="about-hero">
+  <div class="container">
+    <div class="page-badge">Our Story</div>
+    <h1>Building a Greener Nagpur, <span class="text-green">One Tree at a Time</span></h1>
+    <p class="about-hero-sub">GreenVriksha Nagpur is a grassroots community initiative dedicated to making Nagpur greener through weekly tree plantation drives, seed collection, and environmental awareness.</p>
+  </div>
+</section>
+
+<!-- Mission -->
+<section class="section">
+  <div class="container">
+    <div class="mission-grid">
+      <div class="mission-content">
+        <app-section-title title="Our Mission" [centered]="false" />
+        <p>GreenVriksha Nagpur was founded with a simple but powerful belief — that every Nagpurian has the power to make their city greener. We started as a small group of friends planting trees on Sunday mornings, and today we're a growing community of 500+ volunteers spanning urban and rural Nagpur.</p>
+        <p>Our mission is to create a sustained, community-driven green cover across the Nagpur district by planting native trees, collecting and distributing seeds, running cleanliness drives, and ensuring every planted tree survives through follow-up care.</p>
+        <div class="mission-tagline">
+          <span class="tagline-part plant">🌱 Plant</span>
+          <span class="tagline-sep">·</span>
+          <span class="tagline-part protect">🛡️ Protect</span>
+          <span class="tagline-sep">·</span>
+          <span class="tagline-part preserve">💚 Preserve</span>
+        </div>
+      </div>
+      <div class="mission-visual">
+        <div class="mission-stat-card">
+          <div class="msv-item">
+            <span class="msv-val">2,800+</span>
+            <span class="msv-lbl">Trees Planted</span>
+          </div>
+          <div class="msv-divider"></div>
+          <div class="msv-item">
+            <span class="msv-val">500+</span>
+            <span class="msv-lbl">Active Volunteers</span>
+          </div>
+          <div class="msv-divider"></div>
+          <div class="msv-item">
+            <span class="msv-val">48</span>
+            <span class="msv-lbl">Sunday Drives</span>
+          </div>
+          <div class="msv-divider"></div>
+          <div class="msv-item">
+            <span class="msv-val">25+</span>
+            <span class="msv-lbl">Areas Covered</span>
+          </div>
+        </div>
+        <div class="mission-year-badge">Est. 2024 · Nagpur</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Values -->
+<section class="section section-alt">
+  <div class="container">
+    <app-section-title
+      title="Our Values"
+      subtitle="The principles that guide every drive, every decision, and every tree we plant."
+      [centered]="true"
+    />
+    <div class="values-grid">
+      @for (val of values; track val.title) {
+        <div class="value-card">
+          <div class="value-emoji">{{ val.emoji }}</div>
+          <h3>{{ val.title }}</h3>
+          <p>{{ val.desc }}</p>
+        </div>
+      }
+    </div>
+  </div>
+</section>
+
+<!-- What We Do -->
+<section class="section">
+  <div class="container">
+    <app-section-title
+      title="What We Do Every Sunday"
+      subtitle="Each Sunday drive is a focused, community-powered effort."
+      [centered]="true"
+    />
+    <div class="sunday-flow">
+      <div class="flow-step">
+        <div class="flow-num">6:30 AM</div>
+        <div class="flow-content">
+          <h4>Team Assembles</h4>
+          <p>Volunteers gather at the designated meeting point. Tools and saplings are distributed.</p>
+        </div>
+      </div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-step">
+        <div class="flow-num">7:00 AM</div>
+        <div class="flow-content">
+          <h4>Plantation Begins</h4>
+          <p>Guided by our team, volunteers plant native saplings and clean the surrounding area.</p>
+        </div>
+      </div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-step">
+        <div class="flow-num">9:00 AM</div>
+        <div class="flow-content">
+          <h4>Wrap Up & Document</h4>
+          <p>Trees are counted, tagged, and photographed. Volunteers share in our WhatsApp group.</p>
+        </div>
+      </div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-step">
+        <div class="flow-num">Follow-up</div>
+        <div class="flow-content">
+          <h4>Ongoing Care</h4>
+          <p>Local volunteers adopt nearby trees for watering and monitoring over the next 6 months.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section about-cta">
+  <div class="container">
+    <div class="about-cta-card">
+      <h2>Be Part of the Movement</h2>
+      <p>Join hundreds of Nagpurians who show up every Sunday to make a lasting difference.</p>
+      <div class="about-cta-btns">
+        <a routerLink="/volunteer" class="btn btn-white">Join as Volunteer</a>
+        <a routerLink="/drives" class="btn btn-outline-white">See Sunday Drives</a>
+      </div>
+    </div>
+  </div>
+</section>

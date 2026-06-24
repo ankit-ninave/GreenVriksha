@@ -1,0 +1,66 @@
+.coverage-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-bottom: 1.5rem;
+
+  @media (max-width: 700px) { grid-template-columns: 1fr; }
+}
+
+.coverage-card {
+  background: var(--white);
+  border-radius: var(--radius-xl);
+  padding: 2rem;
+  border: 1px solid var(--gray-200);
+}
+
+.coverage-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid var(--gray-100);
+
+  &.urban h3 { color: var(--primary); }
+  &.rural h3 { color: var(--green-dark); }
+
+  h3 { font-size: 1.2rem; margin-bottom: 0.2rem; }
+  p { font-size: 0.8rem; color: var(--gray-500); }
+}
+
+.cov-icon {
+  font-size: 2rem;
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-md);
+  background: var(--gray-50);
+  flex-shrink: 0;
+}
+
+.area-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.area-tag {
+  font-size: 0.78rem;
+  font-weight: 500;
+  padding: 0.3rem 0.75rem;
+  border-radius: var(--radius-full);
+}
+
+.urban-tag { background: var(--primary-light); color: var(--primary-dark); }
+.rural-tag { background: var(--green-light); color: var(--green-dark); }
+
+.coverage-note {
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--gray-500);
+
+  strong { color: var(--primary); }
+}

@@ -1,0 +1,43 @@
+<section class="drives-hero">
+  <div class="container">
+    <div class="page-badge">Every Sunday</div>
+    <h1>Sunday <span class="text-primary">Plantation Drives</span></h1>
+    <p>Join our weekly green drives across Nagpur. Open to all — no experience needed. Just bring your energy and love for trees.</p>
+    <a routerLink="/volunteer" class="btn btn-primary">Register for Next Drive</a>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="drives-toolbar">
+      <app-section-title title="All Drives" [centered]="false" />
+      <div class="filter-tabs">
+        <button class="filter-btn" [class.active]="filter() === 'all'" (click)="setFilter('all')">All</button>
+        <button class="filter-btn" [class.active]="filter() === 'upcoming'" (click)="setFilter('upcoming')">Upcoming</button>
+        <button class="filter-btn" [class.active]="filter() === 'completed'" (click)="setFilter('completed')">Completed</button>
+      </div>
+    </div>
+
+    <div class="drives-grid">
+      @for (drive of filteredDrives; track drive.date) {
+        <app-drive-card [drive]="drive" />
+      }
+      @if (filteredDrives.length === 0) {
+        <div class="no-drives">No drives found for this filter.</div>
+      }
+    </div>
+  </div>
+</section>
+
+<section class="drives-cta section">
+  <div class="container">
+    <div class="drives-cta-card">
+      <h2>Can't find a drive near you?</h2>
+      <p>Request a plantation in your area and we'll plan the next drive there.</p>
+      <div class="drives-cta-btns">
+        <a routerLink="/request-plantation" class="btn btn-white">Request Plantation</a>
+        <a routerLink="/volunteer" class="btn btn-outline-white">Volunteer with Us</a>
+      </div>
+    </div>
+  </div>
+</section>

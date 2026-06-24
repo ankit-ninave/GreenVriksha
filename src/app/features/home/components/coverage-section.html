@@ -1,0 +1,45 @@
+<section class="section section-alt">
+  <div class="container">
+    <app-section-title
+      title="Our Coverage Area"
+      subtitle="GreenVriksha Nagpur serves both urban and rural communities across the Nagpur district."
+      [centered]="true"
+    />
+
+    <div class="coverage-grid">
+      <div class="coverage-card">
+        <div class="coverage-header urban">
+          <div class="cov-icon">🏙️</div>
+          <div>
+            <h3>Urban Nagpur</h3>
+            <p>City parks, colonies & public spaces</p>
+          </div>
+        </div>
+        <div class="area-tags">
+          @for (area of urban; track area) {
+            <span class="area-tag urban-tag">{{ area }}</span>
+          }
+        </div>
+      </div>
+
+      <div class="coverage-card">
+        <div class="coverage-header rural">
+          <div class="cov-icon">🌾</div>
+          <div>
+            <h3>Rural Nagpur</h3>
+            <p>Villages, farmlands & rural roads</p>
+          </div>
+        </div>
+        <div class="area-tags">
+          @for (area of rural; track area) {
+            <span class="area-tag rural-tag">{{ area }}</span>
+          }
+        </div>
+      </div>
+    </div>
+
+    <p class="coverage-note">
+      Don't see your area? <strong>Request plantation</strong> in your locality and we'll plan our next drive there.
+    </p>
+  </div>
+</section>

@@ -1,0 +1,22 @@
+<section class="section">
+  <div class="container">
+    <app-section-title
+      title="Plant. Protect. Preserve."
+      subtitle="Our three-phase approach ensures every tree we plant has the best chance to thrive and flourish for decades."
+      [centered]="true"
+    />
+
+    <div class="steps-grid">
+      @for (step of steps; track step.num) {
+        <div class="step-card color-{{ step.color }}">
+          <div class="step-top">
+            <div class="step-emoji">{{ step.icon }}</div>
+            <span class="step-num">{{ step.num }}</span>
+          </div>
+          <h3 class="step-title">{{ step.title }}</h3>
+          <p class="step-desc">{{ step.desc }}</p>
+        </div>
+      }
+    </div>
+  </div>
+</section>

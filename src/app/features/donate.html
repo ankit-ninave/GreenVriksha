@@ -1,0 +1,84 @@
+<!-- Hero -->
+<section class="donate-hero">
+  <div class="container">
+    <div class="page-badge">Make a Difference</div>
+    <h1>Donate <span class="text-green">Plants, Seeds & Tools</span></h1>
+    <p>You don't have to dig the earth to make an impact. Donate saplings, seeds, or gardening tools and fuel our Sunday drives.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container donate-grid">
+    <!-- What to donate -->
+    <div class="donate-info">
+      <h2>What Can You Donate?</h2>
+      <div class="donate-types-grid">
+        @for (type of donateTypes; track type.label) {
+          <div class="dtype-card">
+            <div class="dtype-emoji">{{ type.emoji }}</div>
+            <h4>{{ type.label }}</h4>
+            <p>{{ type.desc }}</p>
+          </div>
+        }
+      </div>
+
+      <div class="donate-process">
+        <h3>How It Works</h3>
+        <ol class="process-list">
+          <li>
+            <div class="proc-num">1</div>
+            <div>
+              <strong>Fill the Donation Form</strong>
+              <p>Tell us what you want to donate and your approximate quantity.</p>
+            </div>
+          </li>
+          <li>
+            <div class="proc-num">2</div>
+            <div>
+              <strong>We'll Contact You</strong>
+              <p>Our team will reach out within 24 hours to arrange pickup or drop-off.</p>
+            </div>
+          </li>
+          <li>
+            <div class="proc-num">3</div>
+            <div>
+              <strong>We Plant Together</strong>
+              <p>Your donation goes directly into the next Sunday plantation drive.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </div>
+
+    <!-- Form -->
+    <div class="donate-form-wrap">
+      <div class="form-card">
+        <div class="form-card-header green">
+          <h3>Donation Form</h3>
+          <p>Share what you'd like to contribute. Every sapling, seed, or tool matters.</p>
+        </div>
+
+        <div class="google-form-embed">
+          <div class="form-placeholder">
+            <div class="form-ph-icon">🌱</div>
+            <h4>Donation Form</h4>
+            <p>Replace this placeholder with your Google Form for donations.</p>
+            <a
+              href="https://forms.google.com"
+              target="_blank"
+              rel="noopener"
+              class="btn btn-green form-open-btn"
+            >
+              Open Donation Form
+              <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+            </a>
+            <p class="form-ph-note">
+              Embed your Google Form here using:<br />
+              <code>&lt;iframe src="FORM_URL/viewform?embedded=true" ...&gt;&lt;/iframe&gt;</code>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

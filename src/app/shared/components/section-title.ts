@@ -1,0 +1,13 @@
+import { Component, input } from '@angular/core';
+
+@Component({
+  selector: 'app-section-title',
+  imports: [],
+  templateUrl: './section-title.html',
+  styleUrl: './section-title.scss',
+})
+export class SectionTitle {
+  readonly title = input.required<string>();
+  readonly subtitle = input<string>('');
+  readonly centered = input(true);
+}

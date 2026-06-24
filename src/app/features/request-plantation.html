@@ -1,0 +1,85 @@
+<!-- Hero -->
+<section class="req-hero">
+  <div class="container">
+    <div class="page-badge">Request Plantation</div>
+    <h1>Want Trees in <span class="text-primary">Your Area?</span></h1>
+    <p>Request tree plantation in your colony, school, village, or public space. Our team will evaluate and plan a dedicated drive for your location.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container req-grid">
+    <!-- Info -->
+    <div class="req-info">
+      <h2>Plantation Request Areas</h2>
+      <div class="area-types-grid">
+        @for (type of areaTypes; track type.label) {
+          <div class="area-type-chip">
+            <span>{{ type.emoji }}</span>
+            <span>{{ type.label }}</span>
+          </div>
+        }
+      </div>
+
+      <div class="req-requirements">
+        <h3>Before You Request</h3>
+        <ul class="req-checklist">
+          <li>
+            <svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+            <span><strong>Permission</strong> — Do you have permission (or can arrange it) from the land owner / authority?</span>
+          </li>
+          <li>
+            <svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+            <span><strong>Water Availability</strong> — Is water available nearby for post-plantation care?</span>
+          </li>
+          <li>
+            <svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+            <span><strong>Community Interest</strong> — Are local residents willing to help care for the trees after planting?</span>
+          </li>
+          <li>
+            <svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+            <span><strong>Site Access</strong> — Can our team access the site safely on a Sunday morning?</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="req-note">
+        <div class="note-icon">💡</div>
+        <div>
+          <p><strong>Don't worry if you don't have all of these sorted.</strong> Fill the form and we'll work with you to figure out the details. We evaluate every request with care.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Form -->
+    <div class="req-form-wrap">
+      <div class="form-card">
+        <div class="form-card-header orange">
+          <h3>Plantation Request Form</h3>
+          <p>Tell us about the area where you'd like trees planted. We'll review and get back to you within 48 hours.</p>
+        </div>
+
+        <div class="google-form-embed">
+          <div class="form-placeholder">
+            <div class="form-ph-icon">📍</div>
+            <h4>Request Form</h4>
+            <p>Replace this placeholder with your Google Form for plantation requests.</p>
+            <a
+              href="https://forms.google.com"
+              target="_blank"
+              rel="noopener"
+              class="btn btn-primary form-open-btn"
+            >
+              Open Request Form
+              <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+            </a>
+            <p class="form-ph-note">
+              Embed your Google Form here using:<br />
+              <code>&lt;iframe src="FORM_URL/viewform?embedded=true" ...&gt;&lt;/iframe&gt;</code>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

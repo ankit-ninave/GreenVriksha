@@ -1,0 +1,68 @@
+.cta-banner {
+  padding: 4rem 0;
+  border-radius: var(--radius-xl);
+  margin: 2rem 0;
+
+  &.variant-blue {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+  }
+
+  &.variant-green {
+    background: linear-gradient(135deg, var(--green) 0%, var(--green-dark) 100%);
+  }
+}
+
+.cta-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+.cta-content {
+  h2 {
+    color: var(--white);
+    margin-bottom: 0.5rem;
+  }
+
+  p {
+    color: rgba(255,255,255,0.85);
+    font-size: 1rem;
+  }
+}
+
+.cta-actions {
+  display: flex;
+  gap: 1rem;
+  flex-shrink: 0;
+
+  @media (max-width: 480px) {
+    flex-direction: column;
+    width: 100%;
+
+    .btn { justify-content: center; }
+  }
+}
+
+.btn-outline-white {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--radius-full);
+  font-weight: 600;
+  font-size: 0.9rem;
+  background: transparent;
+  color: var(--white);
+  border: 2px solid rgba(255,255,255,0.6);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-decoration: none;
+
+  &:hover { background: rgba(255,255,255,0.15); border-color: white; }
+}

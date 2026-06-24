@@ -1,0 +1,16 @@
+<section class="cta-banner" [class]="'variant-' + variant()">
+  <div class="container cta-inner">
+    <div class="cta-content">
+      <h2>{{ title() }}</h2>
+      @if (subtitle()) {
+        <p>{{ subtitle() }}</p>
+      }
+    </div>
+    <div class="cta-actions">
+      <a [routerLink]="primaryLink()" class="btn btn-white">{{ primaryLabel() }}</a>
+      @if (secondaryLabel()) {
+        <a [routerLink]="secondaryLink()" class="btn btn-outline-white">{{ secondaryLabel() }}</a>
+      }
+    </div>
+  </div>
+</section>

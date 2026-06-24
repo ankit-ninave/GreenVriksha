@@ -1,0 +1,48 @@
+.gallery-card {
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  background: var(--gray-100);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-xl);
+
+    .gallery-img-wrap img { transform: scale(1.05); }
+  }
+}
+
+.gallery-img-wrap {
+  position: relative;
+  aspect-ratio: 4/3;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+  }
+}
+
+.gallery-tag {
+  position: absolute;
+  top: 0.75rem;
+  left: 0.75rem;
+  background: rgba(0,0,0,0.55);
+  color: white;
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 0.2rem 0.6rem;
+  border-radius: var(--radius-full);
+  backdrop-filter: blur(4px);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.gallery-caption {
+  padding: 0.75rem 1rem;
+  font-size: 0.85rem;
+  color: var(--gray-600);
+  font-weight: 500;
+}
