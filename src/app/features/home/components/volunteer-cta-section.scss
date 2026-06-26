@@ -121,9 +121,15 @@ p {
   height: 1.1rem;
 }
 
-@media (max-width: 600px) {
-  .volunteer-cta { padding: 2.5rem 1.5rem; }
+@media (max-width: 768px) {
+  .volunteer-cta { padding: 3rem 2rem; }
   .cta-stats-row { gap: 1.5rem; }
-  .cta-buttons { flex-direction: column; align-items: center; }
-  .cta-buttons .btn { width: 100%; max-width: 280px; justify-content: center; }
+}
+
+@media (max-width: 480px) {
+  .volunteer-cta { padding: 2.5rem 1.25rem; border-radius: 1rem; }
+  .cta-stats-row { gap: 1rem; }
+  .cta-mini-stat strong { font-size: 1.15rem; }
+  .cta-buttons { flex-direction: column; align-items: stretch; }
+  .cta-buttons .btn, .cta-buttons .btn-outline-white { width: 100%; justify-content: center; }
 }

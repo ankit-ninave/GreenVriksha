@@ -5,6 +5,7 @@ import { WhatWeDoSection } from './home/components/what-we-do-section';
 import { SundayDriveSection } from './home/components/sunday-drive-section';
 import { ContributeSection } from './home/components/contribute-section';
 import { HowItWorksSection } from './home/components/how-it-works-section';
+import { QuotesSection } from './home/components/quotes-section';
 import { CoverageSection } from './home/components/coverage-section';
 import { GalleryPreviewSection } from './home/components/gallery-preview-section';
 import { VolunteerCtaSection } from './home/components/volunteer-cta-section';
@@ -18,6 +19,7 @@ import { VolunteerCtaSection } from './home/components/volunteer-cta-section';
     SundayDriveSection,
     ContributeSection,
     HowItWorksSection,
+    QuotesSection,
     CoverageSection,
     GalleryPreviewSection,
     VolunteerCtaSection,

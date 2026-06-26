@@ -1,0 +1,62 @@
+<section class="quotes-section">
+
+  <!-- Section label -->
+  <div class="container">
+    <div class="quotes-eyebrow">
+      <span class="eyebrow-leaf">🌿</span>
+      <span>वाचा — Voices of the Earth</span>
+      <span class="eyebrow-leaf">🌿</span>
+    </div>
+  </div>
+
+  <!-- Featured quote — Tukaram -->
+  <div class="featured-quote-wrap">
+    <div class="fq-bg-texture"></div>
+    <div class="fq-deco fq-deco-1">🌳</div>
+    <div class="fq-deco fq-deco-2">🍃</div>
+    <div class="fq-deco fq-deco-3">🌿</div>
+
+    <div class="container fq-inner">
+      <div class="fq-lang-badge">{{ featured.lang }}</div>
+
+      <div class="fq-devanagari">
+        @for (line of featured.fullDevanagari!.split('\n'); track $index) {
+          <span class="fq-line">{{ line }}</span>
+        }
+      </div>
+
+      <p class="fq-transliteration">{{ featured.transliteration }}</p>
+      <p class="fq-translation">{{ featured.translation }}</p>
+
+      <div class="fq-attribution">
+        <div class="fq-attr-line"></div>
+        <div class="fq-attr-text">
+          <span class="fq-author">{{ featured.author }}</span>
+          <span class="fq-source">{{ featured.source }}</span>
+        </div>
+        <div class="fq-attr-line"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Secondary quotes -->
+  <div class="container">
+    <div class="secondary-quotes">
+      @for (quote of quotes; track quote.devanagari) {
+        <div class="sq-card" [style.--accent]="quote.accent" [style.--bg]="quote.color">
+          <div class="sq-lang">{{ quote.lang }}</div>
+          <div class="sq-devanagari">{{ quote.devanagari }}</div>
+          <p class="sq-translation">{{ quote.translation }}</p>
+          <div class="sq-footer">
+            <span class="sq-source">{{ quote.source }}</span>
+          </div>
+        </div>
+      }
+    </div>
+
+    <p class="quotes-note">
+      These timeless words remind us — our bond with nature is ancient, sacred, and unbreakable.
+    </p>
+  </div>
+
+</section>
