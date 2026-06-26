@@ -1,57 +1,120 @@
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.mission-section {
+  background: var(--white);
+}
+
+.mission-head {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.mission-eyebrow {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--green-dark);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  margin-bottom: 0.75rem;
+}
+
+.mission-h2 {
+  font-size: clamp(2.2rem, 5vw, 3.75rem);
+  font-weight: 900;
+  line-height: 1.1;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  margin-bottom: 0.85rem;
+
+  .m-plant   { color: var(--green-dark); }
+  .m-protect { color: var(--primary); }
+  .m-preserve { color: #7C3AED; }
+}
+
+.mission-sub {
+  color: var(--gray-500);
+  font-size: 1rem;
+  max-width: 520px;
+  margin: 0 auto;
+  line-height: 1.65;
+}
+
 .steps-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
-  position: relative;
+  gap: 1.5rem;
 
-  @media (max-width: 800px) { grid-template-columns: 1fr; gap: 1.5rem; }
+  @media (max-width: 800px) { grid-template-columns: 1fr; gap: 1.25rem; }
 }
 
 .step-card {
-  background: var(--white);
   border-radius: var(--radius-xl);
-  padding: 2.25rem 2rem;
-  border: 1px solid var(--gray-200);
+  padding: 2.5rem 2rem;
   position: relative;
-  transition: all 0.25s ease;
+  overflow: hidden;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  animation: fadeUp 0.7s ease both;
 
-  &:hover { transform: translateY(-4px); box-shadow: var(--shadow-xl); border-color: transparent; }
+  &:nth-child(1) { animation-delay: 0.1s; }
+  &:nth-child(2) { animation-delay: 0.25s; }
+  &:nth-child(3) { animation-delay: 0.4s; }
 
-  &.color-green { border-top: 3px solid var(--green); }
-  &.color-blue  { border-top: 3px solid var(--primary); }
-  &.color-orange { border-top: 3px solid #EA580C; }
+  &:hover { transform: translateY(-6px); box-shadow: var(--shadow-xl); }
+
+  &.color-green {
+    background: #F0FDF4;
+    .step-title  { color: #166534; }
+    .step-num-bg { color: #15803d; }
+  }
+  &.color-blue {
+    background: #EFF6FF;
+    .step-title  { color: #1e40af; }
+    .step-num-bg { color: #3b82f6; }
+  }
+  &.color-orange {
+    background: #FFF7ED;
+    .step-title  { color: #9a3412; }
+    .step-num-bg { color: #f97316; }
+  }
 }
 
-.step-top {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  margin-bottom: 1.25rem;
+.step-num-bg {
+  position: absolute;
+  top: -0.75rem;
+  right: 1rem;
+  font-size: 7rem;
+  font-weight: 900;
+  line-height: 1;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  opacity: 0.07;
+  user-select: none;
+  pointer-events: none;
 }
 
 .step-emoji {
-  font-size: 2.5rem;
-  line-height: 1;
-}
-
-.step-num {
   font-size: 3rem;
-  font-weight: 900;
-  color: var(--gray-100);
   line-height: 1;
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  margin-bottom: 1.25rem;
 }
 
 .step-title {
-  font-size: 1.5rem;
+  font-size: 1.65rem;
   font-weight: 800;
-  color: var(--gray-900);
-  margin-bottom: 0.75rem;
   font-family: 'Plus Jakarta Sans', sans-serif;
+  margin-bottom: 0.75rem;
+  line-height: 1.1;
 }
 
 .step-desc {
-  color: var(--gray-500);
+  color: var(--gray-600);
   font-size: 0.9rem;
-  line-height: 1.7;
+  line-height: 1.75;
+}
+
+@media (max-width: 480px) {
+  .step-card { padding: 2rem 1.5rem; }
+  .step-emoji { font-size: 2.5rem; }
+  .step-title { font-size: 1.4rem; }
 }

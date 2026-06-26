@@ -1,9 +1,8 @@
 import { Component } from '@angular/core';
-import { SectionTitle } from '../../../shared/components/section-title';
 
 @Component({
   selector: 'app-how-it-works-section',
-  imports: [SectionTitle],
+  imports: [],
   templateUrl: './how-it-works-section.html',
   styleUrl: './how-it-works-section.scss',
 })

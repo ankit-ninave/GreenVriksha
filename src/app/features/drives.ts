@@ -19,7 +19,7 @@ export class Drives {
       time: '7:00 AM – 10:00 AM',
       location: 'Futala Lake Garden',
       area: 'Nagpur',
-      focus: 'Native Tree Plantation + Lakeside Cleanup',
+      focus: 'Native Tree Plantation',
       bring: ['Water bottle', 'Gloves', 'Small shovel'],
       status: 'upcoming',
     },

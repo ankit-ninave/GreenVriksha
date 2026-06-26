@@ -13,7 +13,7 @@ export class SundayDriveSection {
     date: 'Sunday, June 29, 2026',
     time: '7:00 AM – 10:00 AM',
     location: 'Futala Lake Garden, Nagpur',
-    focus: 'Native Tree Plantation + Lakeside Cleanup',
+    focus: 'Native Tree Plantation',
     coordinator: 'GreenVriksha Team',
     bring: ['Water bottle', 'Comfortable shoes', 'Gloves (optional)', 'Small shovel if available'],
     slots: 40,

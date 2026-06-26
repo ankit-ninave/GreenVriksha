@@ -1,14 +1,76 @@
-.stats-section {
-  padding: 3rem 0;
-  background: var(--white);
-  border-bottom: 1px solid var(--gray-100);
+.impact-band {
+  background: linear-gradient(135deg, #064e3b 0%, #065f46 40%, #15803d 100%);
+  padding: 3.5rem 0;
 }
 
-.stats-grid {
+.impact-eyebrow {
+  text-align: center;
+  color: rgba(255,255,255,0.5);
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  margin-bottom: 2.5rem;
+}
+
+.impact-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 1.5rem;
+  gap: 0;
+}
 
-  @media (max-width: 900px) { grid-template-columns: repeat(2, 1fr); }
-  @media (max-width: 480px) { grid-template-columns: 1fr 1fr; gap: 1rem; }
+.impact-item {
+  text-align: center;
+  padding: 0.5rem 1rem;
+  border-right: 1px solid rgba(255,255,255,0.12);
+
+  &:last-child { border-right: none; }
+}
+
+.impact-emoji {
+  font-size: 2.25rem;
+  margin-bottom: 0.6rem;
+  line-height: 1;
+}
+
+@keyframes popIn {
+  from { opacity: 0; transform: scale(0.6) translateY(12px); }
+  to   { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+.impact-num {
+  font-size: clamp(2.25rem, 5vw, 3.75rem);
+  font-weight: 900;
+  color: #fff;
+  line-height: 1;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  margin-bottom: 0.4rem;
+  animation: popIn 0.6s cubic-bezier(0.22,1,0.36,1) both;
+}
+
+.impact-item:nth-child(1) .impact-num { animation-delay: 0.1s; }
+.impact-item:nth-child(2) .impact-num { animation-delay: 0.22s; }
+.impact-item:nth-child(3) .impact-num { animation-delay: 0.34s; }
+.impact-item:nth-child(4) .impact-num { animation-delay: 0.46s; }
+
+.impact-lbl {
+  font-size: 0.875rem;
+  color: rgba(255,255,255,0.7);
+  font-weight: 500;
+}
+
+@media (max-width: 700px) {
+  .impact-band { padding: 2.5rem 0; }
+  .impact-eyebrow { margin-bottom: 1.75rem; }
+  .impact-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .impact-item {
+    padding: 1.25rem 0.75rem;
+    border-bottom: 1px solid rgba(255,255,255,0.12);
+
+    &:nth-child(2) { border-right: none; }
+    &:nth-child(3) { border-bottom: none; }
+    &:nth-child(4) { border-right: none; border-bottom: none; }
+  }
 }

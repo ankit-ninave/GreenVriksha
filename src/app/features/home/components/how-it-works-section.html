@@ -1,18 +1,22 @@
-<section class="section">
+<section class="section mission-section">
   <div class="container">
-    <app-section-title
-      title="Plant. Protect. Preserve."
-      subtitle="Our three-phase approach ensures every tree we plant has the best chance to thrive and flourish for decades."
-      [centered]="true"
-    />
+    <div class="mission-head">
+      <p class="mission-eyebrow">Our Approach</p>
+      <h2 class="mission-h2">
+        <span class="m-plant">Plant.</span>
+        <span class="m-protect"> Protect.</span>
+        <span class="m-preserve"> Preserve.</span>
+      </h2>
+      <p class="mission-sub">
+        We don't just plant and leave. Every tree gets care until it stands strong for generations.
+      </p>
+    </div>
 
     <div class="steps-grid">
       @for (step of steps; track step.num) {
         <div class="step-card color-{{ step.color }}">
-          <div class="step-top">
-            <div class="step-emoji">{{ step.icon }}</div>
-            <span class="step-num">{{ step.num }}</span>
-          </div>
+          <div class="step-num-bg">{{ step.num }}</div>
+          <div class="step-emoji">{{ step.icon }}</div>
           <h3 class="step-title">{{ step.title }}</h3>
           <p class="step-desc">{{ step.desc }}</p>
         </div>
