@@ -1,21 +1,42 @@
+@keyframes cardIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
 .feature-card {
-  background: var(--white);
   border-radius: var(--radius-xl);
   padding: 2rem 1.75rem;
-  border: 1px solid var(--gray-200);
-  transition: all 0.25s ease;
+  border: 1px solid transparent;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
   height: 100%;
+  animation: cardIn 0.6s ease both;
 
   &:hover {
-    transform: translateY(-4px);
+    transform: translateY(-6px);
     box-shadow: var(--shadow-xl);
-    border-color: transparent;
   }
 
-  &.color-blue .card-icon { background: var(--primary-light); color: var(--primary); }
-  &.color-green .card-icon { background: var(--green-light); color: var(--green-dark); }
-  &.color-orange .card-icon { background: #FFF7ED; color: #EA580C; }
-  &.color-purple .card-icon { background: #F5F3FF; color: #7C3AED; }
+  /* Soft gradient backgrounds per color */
+  &.color-green {
+    background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+    border-color: #bbf7d0;
+    .card-icon { background: var(--green-dark); color: #fff; }
+  }
+  &.color-blue {
+    background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+    border-color: #bfdbfe;
+    .card-icon { background: var(--primary); color: #fff; }
+  }
+  &.color-orange {
+    background: linear-gradient(135deg, #fff7ed 0%, #ffedd5 100%);
+    border-color: #fed7aa;
+    .card-icon { background: #EA580C; color: #fff; }
+  }
+  &.color-purple {
+    background: linear-gradient(135deg, #faf5ff 0%, #ede9fe 100%);
+    border-color: #ddd6fe;
+    .card-icon { background: #7C3AED; color: #fff; }
+  }
 }
 
 .card-icon {
@@ -27,17 +48,19 @@
   justify-content: center;
   margin-bottom: 1.25rem;
   font-size: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 
-  svg { width: 1.75rem; height: 1.75rem; }
+  svg { width: 1.6rem; height: 1.6rem; }
 }
 
 .card-title {
   color: var(--gray-900);
   margin-bottom: 0.6rem;
+  font-family: 'Plus Jakarta Sans', sans-serif;
 }
 
 .card-desc {
-  color: var(--gray-500);
+  color: var(--gray-600);
   font-size: 0.9rem;
   line-height: 1.65;
 }

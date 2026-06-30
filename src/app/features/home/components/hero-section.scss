@@ -1,4 +1,4 @@
-/* ── Animations ────────────────────────────────────── */
+/* ── Animations ─────────────────────────────────── */
 @keyframes fadeSlideUp {
   from { opacity: 0; transform: translateY(32px); }
   to   { opacity: 1; transform: translateY(0); }
@@ -9,42 +9,39 @@
 }
 @keyframes blobDrift {
   0%, 100% { transform: translate(0, 0) scale(1); }
-  33%       { transform: translate(30px, -25px) scale(1.07); }
-  66%       { transform: translate(-18px, 20px) scale(0.93); }
+  33%       { transform: translate(28px, -22px) scale(1.06); }
+  66%       { transform: translate(-16px, 18px) scale(0.94); }
 }
 @keyframes floatLeaf {
-  0%, 100% { transform: translateY(0) rotate(0deg);   opacity: 0.45; }
-  50%       { transform: translateY(-38px) rotate(22deg); opacity: 0.75; }
+  0%, 100% { transform: translateY(0) rotate(0deg);    opacity: 0.5; }
+  50%       { transform: translateY(-36px) rotate(20deg); opacity: 0.85; }
 }
 @keyframes pulse {
   0%, 100% { transform: scale(1);   opacity: 1; }
-  50%       { transform: scale(1.5); opacity: 0.6; }
+  50%       { transform: scale(1.5); opacity: 0.55; }
 }
 @keyframes float {
   0%, 100% { transform: translateY(0); }
   50%       { transform: translateY(-10px); }
 }
-@keyframes shimmer {
-  0%   { background-position: -200% center; }
-  100% { background-position:  200% center; }
-}
 
-/* Animation utility classes */
+/* Animation utilities */
 .anim-up    { animation: fadeSlideUp 0.72s ease both; }
 .anim-scale { animation: scaleIn 0.85s cubic-bezier(0.22,1,0.36,1) 0.2s both; }
 .anim-d1 { animation-delay: 0.05s; }
 .anim-d2 { animation-delay: 0.18s; }
-.anim-d3 { animation-delay: 0.3s;  }
+.anim-d3 { animation-delay: 0.3s; }
 .anim-d4 { animation-delay: 0.42s; }
 .anim-d5 { animation-delay: 0.55s; }
 
-/* ── Layout ───────────────────────────────────────── */
+/* ── Layout ─────────────────────────────────────── */
 .hero {
   position: relative;
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  background: linear-gradient(155deg, #EAF4FF 0%, #F0FDF4 45%, #EEF2FF 100%);
+  /* Premium dark forest green */
+  background: linear-gradient(140deg, #022c22 0%, #064e3b 40%, #0a5e30 72%, #126b42 100%);
   padding: 1.5rem 0 0;
 }
 
@@ -58,29 +55,29 @@
 .hero-blob {
   position: absolute;
   border-radius: 50%;
-  filter: blur(70px);
+  filter: blur(72px);
 }
 
 .hero-blob-1 {
-  width: 550px; height: 550px;
-  background: rgba(89,166,255,0.22);
+  width: 560px; height: 560px;
+  background: rgba(134,239,172,0.12);
   top: -180px; right: -80px;
   animation: blobDrift 16s ease-in-out infinite;
 }
 .hero-blob-2 {
   width: 400px; height: 400px;
-  background: rgba(34,197,94,0.18);
+  background: rgba(59,130,246,0.09);
   bottom: -120px; left: -80px;
   animation: blobDrift 20s ease-in-out infinite reverse;
 }
 .hero-blob-3 {
-  width: 300px; height: 300px;
-  background: rgba(124,58,237,0.08);
-  top: 40%; left: 40%;
+  width: 320px; height: 320px;
+  background: rgba(167,139,250,0.07);
+  top: 35%; left: 38%;
   animation: blobDrift 24s ease-in-out infinite 4s;
 }
 
-/* Floating decorative leaves */
+/* Floating leaves */
 .hero-leaf {
   position: absolute;
   font-size: 1.6rem;
@@ -88,12 +85,12 @@
   z-index: 0;
   animation: floatLeaf ease-in-out infinite;
 }
-.hl-1 { top: 12%;  left: 6%;   animation-duration: 6s;  animation-delay: 0s; }
-.hl-2 { top: 65%;  left: 10%;  animation-duration: 8.5s; animation-delay: 2s; }
-.hl-3 { top: 20%;  right: 4%;  animation-duration: 7s;  animation-delay: 1s; }
-.hl-4 { bottom: 25%; right: 6%; animation-duration: 9s;  animation-delay: 3.5s; }
+.hl-1 { top: 12%;  left: 5%;    animation-duration: 6s;   animation-delay: 0s; }
+.hl-2 { top: 62%;  left: 9%;    animation-duration: 8.5s; animation-delay: 2s; }
+.hl-3 { top: 18%;  right: 4%;   animation-duration: 7s;   animation-delay: 1s; }
+.hl-4 { bottom: 22%; right: 6%; animation-duration: 9.5s; animation-delay: 3.5s; }
 
-/* ── Inner grid ───────────────────────────────────── */
+/* ── Inner grid ─────────────────────────────────── */
 .hero-inner {
   position: relative;
   z-index: 1;
@@ -104,13 +101,13 @@
   padding-bottom: 3rem;
 }
 
-/* ── Tukaram quote strip ──────────────────────────── */
+/* ── Quote strip ────────────────────────────────── */
 .hero-quote-strip {
   display: inline-flex;
   align-items: center;
   gap: 0.6rem;
-  background: rgba(34,197,94,0.07);
-  border: 1px solid rgba(34,197,94,0.2);
+  background: rgba(134,239,172,0.1);
+  border: 1px solid rgba(134,239,172,0.25);
   border-radius: var(--radius-full);
   padding: 0.45rem 1.1rem;
   margin-bottom: 1rem;
@@ -121,16 +118,18 @@
   font-family: 'Tiro Devanagari Marathi', 'Noto Serif Devanagari', serif;
   font-size: clamp(0.82rem, 1.8vw, 0.97rem);
   font-weight: 600;
-  color: var(--green-dark);
+  color: #86efac;
   letter-spacing: 0.02em;
 }
-.hqs-sep  { color: var(--gray-400); font-size: 0.75rem; }
+.hqs-sep  { color: rgba(255,255,255,0.3); font-size: 0.75rem; }
 .hqs-attr {
   font-family: 'Tiro Devanagari Marathi', 'Noto Serif Devanagari', serif;
-  font-size: 0.78rem; color: var(--gray-500); font-style: italic;
+  font-size: 0.78rem;
+  color: rgba(255,255,255,0.5);
+  font-style: italic;
 }
 
-/* ── Motto ────────────────────────────────────────── */
+/* ── Motto ──────────────────────────────────────── */
 .hero-motto {
   display: flex;
   flex-wrap: wrap;
@@ -142,56 +141,56 @@
   letter-spacing: -0.01em;
   line-height: 1.15;
 }
-.motto-plant   { color: var(--green-dark); }
-.motto-protect { color: var(--primary); }
-.motto-preserve { color: #7C3AED; }
+/* Lighter versions of the 3 colors so they glow on dark */
+.motto-plant   { color: #86efac; }
+.motto-protect { color: #7dd3fc; }
+.motto-preserve { color: #c4b5fd; }
 
-/* ── Badge ────────────────────────────────────────── */
+/* ── Badge ──────────────────────────────────────── */
 .hero-badge {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  background: var(--white);
-  border: 1px solid var(--primary-light);
-  color: var(--primary-dark);
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.18);
+  color: rgba(255,255,255,0.92);
   font-size: 0.8rem;
   font-weight: 600;
   padding: 0.38rem 0.95rem;
   border-radius: var(--radius-full);
   margin-bottom: 1.1rem;
-  box-shadow: 0 2px 8px rgba(89,166,255,0.15);
 }
 
 .badge-dot {
   width: 0.5rem; height: 0.5rem;
-  background: var(--green);
+  background: #86efac;
   border-radius: 50%;
   animation: pulse 2s infinite;
 }
 
-/* ── Heading ──────────────────────────────────────── */
+/* ── Heading ────────────────────────────────────── */
 .hero-heading {
   font-size: clamp(1.85rem, 3.2vw, 2.75rem);
   line-height: 1.2;
   font-weight: 800;
-  color: var(--gray-900);
+  color: #ffffff;
   margin-bottom: 1rem;
   font-family: 'Plus Jakarta Sans', sans-serif;
 }
 
-.highlight-green { color: var(--green-dark); }
-.highlight-blue  { color: var(--primary); }
+.highlight-green { color: #86efac; }
+.highlight-blue  { color: #7dd3fc; }
 
-/* ── Subtext ──────────────────────────────────────── */
+/* ── Subtext ────────────────────────────────────── */
 .hero-subtext {
   font-size: 1rem;
-  color: var(--gray-500);
+  color: rgba(255,255,255,0.7);
   max-width: 480px;
-  line-height: 1.72;
+  line-height: 1.75;
   margin-bottom: 1.25rem;
 }
 
-/* ── Tags ─────────────────────────────────────────── */
+/* ── Tags ───────────────────────────────────────── */
 .hero-tags {
   display: flex;
   flex-wrap: wrap;
@@ -203,28 +202,32 @@
   display: inline-flex;
   align-items: center;
   gap: 0.4rem;
-  background: var(--white);
-  border: 1px solid var(--gray-200);
-  color: var(--gray-600);
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.14);
+  color: rgba(255,255,255,0.8);
   font-size: 0.78rem;
   font-weight: 500;
   padding: 0.35rem 0.75rem;
   border-radius: var(--radius-full);
   transition: all 0.2s;
 
-  &:hover { border-color: var(--primary-light); background: var(--primary-light); color: var(--primary-dark); }
+  &:hover {
+    background: rgba(255,255,255,0.15);
+    border-color: rgba(255,255,255,0.28);
+    color: #fff;
+  }
 
   svg { width: 0.82rem; height: 0.82rem; }
 }
 
-/* ── Action buttons ───────────────────────────────── */
+/* ── Buttons ────────────────────────────────────── */
 .hero-actions {
   display: flex;
   flex-wrap: wrap;
   gap: 0.75rem;
 }
 
-/* ── Visual side ──────────────────────────────────── */
+/* ── Visual side ────────────────────────────────── */
 .hero-visual {
   position: relative;
   height: 400px;
@@ -233,20 +236,18 @@
   justify-content: center;
 }
 
-/* Main card */
 .hero-card {
-  background: var(--white);
+  background: #fff;
   border-radius: var(--radius-xl);
-  box-shadow: 0 20px 60px rgba(0,0,0,0.1), 0 4px 16px rgba(0,0,0,0.06);
-  border: 1px solid rgba(255,255,255,0.8);
+  box-shadow: 0 24px 64px rgba(0,0,0,0.3), 0 4px 16px rgba(0,0,0,0.15);
+  border: 1px solid rgba(255,255,255,0.6);
 }
 
 .hero-card-main {
   position: absolute;
   padding: 1.75rem;
   width: 280px;
-  top: 50%;
-  left: 50%;
+  top: 50%; left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
   background: linear-gradient(150deg, #fff 60%, #f0fdf4);
@@ -261,7 +262,7 @@
 
 .hc-tree {
   width: 90px; height: 108px;
-  filter: drop-shadow(0 8px 20px rgba(22,163,74,0.28));
+  filter: drop-shadow(0 8px 24px rgba(22,163,74,0.35));
   animation: float 4s ease-in-out infinite;
 }
 
@@ -302,7 +303,7 @@
 }
 
 .hero-card-1 {
-  top: 6%;  right: -8px;
+  top: 5%; right: -8px;
   animation: float 3s ease-in-out infinite;
 }
 .hero-card-2 {
@@ -310,14 +311,13 @@
   animation: float 3.5s ease-in-out infinite 1.2s;
 }
 .hero-card-3 {
-  bottom: 6%; right: 5%;
+  bottom: 4%; right: 5%;
   animation: float 4.2s ease-in-out infinite 2.4s;
 }
 
 .hcs-icon {
   font-size: 1.35rem;
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 2.5rem; height: 2.5rem;
   border-radius: var(--radius-md);
   display: flex;
   align-items: center;
@@ -343,13 +343,13 @@
   margin-top: 0.1rem;
 }
 
-/* ── Quick facts strip ────────────────────────────── */
+/* ── Quick facts strip ──────────────────────────── */
 .hero-facts {
   position: relative;
   z-index: 1;
-  background: rgba(255,255,255,0.92);
-  backdrop-filter: blur(14px);
-  border-top: 1px solid rgba(229,231,235,0.8);
+  background: rgba(0,0,0,0.25);
+  backdrop-filter: blur(16px);
+  border-top: 1px solid rgba(255,255,255,0.08);
 }
 
 .hf-grid {
@@ -363,21 +363,21 @@
   align-items: center;
   gap: 0.75rem;
   padding: 1rem 2.25rem;
-  border-right: 1px solid var(--gray-200);
+  border-right: 1px solid rgba(255,255,255,0.1);
   transition: background 0.2s;
 
   &:last-child { border-right: none; }
-  &:hover { background: var(--gray-50); }
+  &:hover { background: rgba(255,255,255,0.06); }
 }
 
 .hf-icon { font-size: 1.5rem; flex-shrink: 0; }
 
 .hf-text {
-  strong { display: block; font-size: 0.88rem; font-weight: 700; color: var(--gray-800); line-height: 1.25; }
-  span   { font-size: 0.7rem; color: var(--gray-400); }
+  strong { display: block; font-size: 0.88rem; font-weight: 700; color: #fff; line-height: 1.25; }
+  span   { font-size: 0.7rem; color: rgba(255,255,255,0.5); }
 }
 
-/* ── Responsive ───────────────────────────────────── */
+/* ── Responsive ─────────────────────────────────── */
 @media (max-width: 1024px) {
   .hero-inner { gap: 2rem; }
   .hero-card-main { width: 250px; }
@@ -385,25 +385,21 @@
 
 @media (max-width: 900px) {
   .hero { padding: 3rem 0 0; }
-
   .hero-inner {
     grid-template-columns: 1fr;
     gap: 2rem;
     text-align: center;
     padding-bottom: 2rem;
   }
-
   .hero-quote-strip { justify-content: center; }
   .hero-motto  { justify-content: center; }
   .hero-badge  { margin: 0 auto 1rem; }
   .hero-subtext { margin: 0 auto 1.25rem; }
   .hero-tags   { justify-content: center; }
   .hero-actions { justify-content: center; }
-
   .hero-visual { height: 260px; }
   .hero-card-main { width: 220px; }
   .hero-card-3 { display: none; }
-
   .hl-2, .hl-4 { display: none; }
 }
 
@@ -417,10 +413,9 @@
 @media (max-width: 700px) {
   .hf-grid { display: grid; grid-template-columns: 1fr 1fr; }
   .hf-item {
-    border-right: 1px solid var(--gray-200);
-    border-bottom: 1px solid var(--gray-100);
+    border-right: 1px solid rgba(255,255,255,0.1);
+    border-bottom: 1px solid rgba(255,255,255,0.06);
     padding: 0.85rem 1rem;
-
     &:nth-child(2) { border-right: none; }
     &:nth-child(3) { border-bottom: none; }
     &:nth-child(4) { border-right: none; border-bottom: none; }
